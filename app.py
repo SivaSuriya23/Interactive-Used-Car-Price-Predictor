@@ -86,13 +86,13 @@ if uploaded_file is not None:
                     predictions = model.predict(features_preprocessed)
                     
                     # Convert predictions to lakhs
-                    predictions_in_lakhs = (predictions * 10000000).round()
+                    predictions_in_lakhs = (predictions * 1000000000).round()
                     
                     # Add predictions to the filtered data
                     filtered_data['Price in Lakhs'] = predictions_in_lakhs
                     
-                    # Filter columns to show only 'Model' and 'Price in Lakhs'
-                    result_data = filtered_data[['Model', 'Price in Lakhs']]
+                    # Filter columns to show only 'Fuel type', 'Body type', 'Model', 'Color', 'Seats', 'Transmission',  'Price in Lakhs'
+                    result_data = filtered_data[['Fuel type', 'Body type', 'Model', 'Color', 'Seats', 'Transmission',  'Price in Lakhs']]
                     
                     st.write("Filtered Data with Predicted Prices:")
                     st.write(result_data)
