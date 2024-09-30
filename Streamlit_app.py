@@ -110,9 +110,9 @@ def main():
             formatted_price = format_inr(prediction)
 
             st.markdown(f'''
-                <div style="padding: 10px; border: 2px solid #4CAF50; border-radius: 10px; background-color: #f9f9f9;">
-                    <h2 style="color: #4CAF50;"> {selected_model}</h2>
-                    <h1 style="color: #4CAF50;">₹ {formatted_price}</h1>
+                <div style="padding: 10px; border: 2px solid #4CAF50; border-radius: 10px; background-color: #FFF8DC;">
+                    <h2 style="color: #006400;"> {selected_model}</h2>
+                    <h1 style="color: #8B0000;">₹ {formatted_price}</h1>
                 </div>
             ''', unsafe_allow_html=True)
 
@@ -129,14 +129,14 @@ def main():
                 max_price = matching_cars['price'].max()
 
                 st.markdown(f'''
-                    <div style="padding: 20px; border: 2px solid #2196F3; border-radius: 10px; background-color: #f1f1f1;">
-                        <h2 style="color: #2196F3;">Price Range for {selected_model} in Inventory</h2>
+                    <div style="padding: 20px; border: 2px solid #006400; border-radius: 10px; background-color: #FFF8DC;">
+                        <h2 style="color: #1E90FF;">Price Range for {selected_model} in Inventory</h2>
                         <div style="display: flex; justify-content: space-between;">
-                            <div style="padding: 10px; border: 1px solid #2196F3; border-radius: 5px; background-color: #e3f2fd;">
+                            <div style="padding: 10px; border: 1px solid #006400; border-radius: 5px; background-color: #F8F8FF;">
                                 <strong>Min Price:</strong><br>
                                 ₹ {format_inr(min_price)}
                             </div>
-                            <div style="padding: 10px; border: 1px solid #2196F3; border-radius: 5px; background-color: #e3f2fd;">
+                            <div style="padding: 10px; border: 1px solid #006400; border-radius: 5px; background-color: #F8F8FF;">
                                 <strong>Max Price:</strong><br>
                                 ₹ {format_inr(max_price)}
                             </div>
